@@ -112,7 +112,6 @@ median = ( 7 + 9) / 2 = 8
 The mode is the value that appears most frequently = \[ 9 \].
 ---
 #### (d) Variance for a Sample:
- 
 ![ Image](variance_Formula.jpg)
  
  \[Variance = 20.01 \]
