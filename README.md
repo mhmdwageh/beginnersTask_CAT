@@ -77,9 +77,9 @@
 
   - virtually all observed data will fall within three standard deviations of the mean.
   - Under this rule:
-       - 68% of the data will fall within one standard deviation,
-       - 95% within two standard deviations, 
-       - and 99.7% within three standard deviations .
+       - `68%` of the data will fall within `one` standard deviation,
+       - `95%` within `two` standard deviations, 
+       - and `99.7%` within `three` standard deviations .
   
 
 # Question 2
@@ -99,22 +99,23 @@
 #### (a) Mean:
 ![ Image](Mean_Formula.jpg)
 
-\[ Mean = {(1 * 3) + (3 * 3 ) + (4 * 2 ) + (6 * 1) + (7 * 1) +
+Mean = {(1 * 3) + (3 * 3 ) + (4 * 2 ) + (6 * 1) + (7 * 1) +
            (9 * 4) + (11 * 1) + (12 * 1) + (13 *2) + (14 *2)}
              /
-           ( 3 + 3 + 2 + 1 + 1 + 4 + 1 + 1 + 2 + 2) = 7.3 \]
+           ( 3 + 3 + 2 + 1 + 1 + 4 + 1 + 1 + 2 + 2) = `7.3`
 ---
 #### (b) Median:
-values: \[ 1 , 3 , 4 , 6 , \[ 7 , 9 \], 11 , 12 , ,13 , 14 \]
-median = ( 7 + 9) / 2 = 8
+values: \[ 1 , 3 , 4 , 6 , ` 7 , 9 `, 11 , 12 , ,13 , 14 \]
+`median = ( 7 + 9) / 2 = 8`
 ---
 #### (c) Mode:
-The mode is the value that appears most frequently = \[ 9 \].
+The mode is the value that appears most frequently = ` 9 `.
 ---
 #### (d) Variance for a Sample:
-![ Image](variance_formula.jpg)
  
- \[Variance = 20.01 \]
+![ Image](variance_Formula.jpg)
+ 
+ `Variance = 20.01`
 ---
 
 #### (e) Standard Deviation for a Sample:
@@ -122,22 +123,21 @@ The standard deviation is the square root of the variance:
 
 ![ Image](StandardDeviation_Formula.jpg)
 
-\[sqrt(20.01) = 4.473\]
+`sqrt(20.01) = 4.473`
 
 ---
 ### 4. Population Metrics:
-If the data represents the whole population:
 
 #### (a) Variance for Population:
 The formula changes to:
 ![Image](variance_population.jpg)
 
-\[Variance = 9.345\]
+`Variance = 9.345`
 
 #### (b) Standard Deviation for Population:
 ![ Image](StandardDeviation_Formula.jpg)
 
-\[sqrt(9.345) = 3.057\]
+`sqrt(9.345) = 3.057`
 ---
 
 
@@ -148,19 +148,16 @@ The formula changes to:
 ### Task:
 1. Analyze the distribution of this sample.
 2. Explain how the distribution affects the mean, median, and mode.
-
 **Note:** No calculations are required. Base your answer on the visual distribution.
-
 ---
-
 ## Solution:
 
-The distribution shown in the histogram appears to be **positively skewed** (right-skewed), as the frequency increases as the value progresses, and then it drops off sharply at the higher end.
+The distribution shown in the histogram appears to be **positively skewed** (`right-skewed`), as the frequency increases as the value progresses, and then it drops off sharply at `the higher end`.
 
 ### Implications on Mean, Median, and Mode:
-1. **Mean:** The mean is likely to be **pulled towards the higher values** due to the skewness (influence of the larger values on the average).
+1. **Mean:** The mean is likely to be **shifted to the higher values** due to the skewness .
 2. **Median:** The median will lie **between the mode and the mean**, as it is less affected by extreme values.
-3. **Mode:** The mode will be the **most frequent lower value** as it represents the peak of the distribution.
+3. **Mode:** The mode will be the **most frequent** as it represents the maximum of the distribution.
 
 ---
 
@@ -243,7 +240,7 @@ Functional Programming emphasizes using functions and immutable data. Key concep
 
 ```python
 def minRublesSpent(n, m, a, b):
-   return (n // m) * b + min(b, (n % m) * a)
+   return min((n // m) * b + min(b, (n % m) * a), n * a)
 
 
 n, m, a, b = map(int, input().split())  
@@ -258,8 +255,9 @@ print(minRublesSpent(n, m, a, b))
 
 ```python
 def isCanDistribute(a,b,c,n):
-    coinsPerOne = a+b+c+n
-    if (coinsPerOne) %3 ==0 and  coinsPerOne >= max(a,b,c):
+    totalcoins = a+b+c+n
+    coinsPerOne = totalcoins / 3
+    if (totalcoins) %3 == 0 and  coinsPerOne >= max(a,b,c):
             return "YES"
     else:
         return "NO"
@@ -269,5 +267,5 @@ t = int(input())
 while(t):
     a,b,c,n = map(int, input().split())
     print(isCanDistribute(a,b,c,n))
-    t = t-1
+    t -=1
 ```
