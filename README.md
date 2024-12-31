@@ -113,7 +113,7 @@ The mode is the value that appears most frequently = ` 9 `.
 ---
 #### (d) Variance for a Sample:
  
-![ Image](variance_Formula.jpg)
+![ Image](variance_formula.jpg)
  
  `Variance = 20.01`
 ---
